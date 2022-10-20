@@ -24,7 +24,6 @@ class Api {
         service = retrofit?.create(PokeApiService::class.java)
     }
 
-
     fun getPokemons(listener:(pokemons:List<Pokemon>?) -> Unit){
 
         service?.getPokemons()?.enqueue(
@@ -43,9 +42,4 @@ class Api {
             }
         )
     }
-
-
-
-
-
 }

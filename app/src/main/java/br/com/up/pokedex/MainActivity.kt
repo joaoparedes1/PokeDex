@@ -17,15 +17,18 @@ class MainActivity : AppCompatActivity() {
             findViewById(R.id.recycler_pokemons)
 
         recyclerView.layoutManager =
-            GridLayoutManager(this, 2)
-
-        recyclerView.adapter = PokeAdapter()
+            GridLayoutManager(this, 3)
 
         Api().getPokemons{ pokemons ->
+            if(pokemons != null){
+                recyclerView.adapter  =
+                    PokeAdapter(pokemons) { pokemon ->
 
-
+                    }
+            }else{
+                //TODO Error
+            }
         }
-
     }
 
 }
