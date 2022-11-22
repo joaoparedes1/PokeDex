@@ -30,12 +30,12 @@ class DetailActivity : AppCompatActivity() {
 
             if(details != null){
 
-                var tipoStr = "Nome: "
+                var tipoStr = "Tipo: "
                 var statsStr = "Status:\n"
                 var habilidadeStr = "Abilidades:\n"
                 var movimentosStr = "Ataques:\n"
 
-                nome.text = details.name
+                nome.text = "Nome: " + details.name
 
                 details.types.forEach {
                    tipoStr = tipoStr + it.type.name + "  "
